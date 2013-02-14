@@ -52,6 +52,10 @@ ul#faces {
 	height:100% ;
 	max-height:100%;
 }
+	.portrait ul#faces {
+		width:99%;
+		height:80%;		
+	}
 
 ul#faces li {
 	display:inline-block;
@@ -59,9 +63,11 @@ ul#faces li {
 	text-align:center;
 	text-align:center;
 }
-.portrait ul#faces li {
-	max-width:25%;
-}
+	.portrait ul#faces li {
+		max-width:25%;
+	}
+
+
 ul#faces li span.card {
 	position:relative;
 	border:2px solid #369;
@@ -104,10 +110,14 @@ ul#faces li span.name {
 	right:0;
 	font-weight:bold;
 }
-	ul#faces .eliminated span.card {
-		border:2px solid #666;
+	ul#faces .eliminated.card {
+		border-color: #666;
 		background:#999;
 		opacity:.8;
+		background: #aaa; 
+		background: -moz-radial-gradient(center, ellipse cover,  #ffffff 0%, #aaa 100%); /* FF3.6+ */
+		background: -webkit-radial-gradient(center, ellipse cover,  #ffffff 0%,#aaa 100%); /* Chrome10+,Safari5.1+ */
+		background: radial-gradient(ellipse at center,  #ffffff 0%,#aaa 100%); /* W3C */
 	}
 	ul#faces .eliminated img {
 		visibility:hidden;
@@ -125,6 +135,16 @@ ul#faces li span.name {
 	width:16%;
 	padding:1em;
 }
+	.portrait #panel {
+		position:absolute;
+		right:auto;
+		top:auto;
+		bottom:0;
+		left:0;
+		width:100%;
+		padding:0;
+		border:1px solid red;
+	}
 #panel h2,
 #panel h3,
 #panel ul,
@@ -135,6 +155,13 @@ ul#faces li span.name {
 	font-weight:normal;
 	font-size:1em;
 }
+	.portrait #panel ul {
+		padding:.25em;
+	}
+	.portrait #panel li {
+		width:20%;
+		float:left;
+	}
 div#questions h2 {
 	position:absolute;
 	left:-9999em;
@@ -151,6 +178,9 @@ div#questions a {
 	text-align:center;
 	text-decoration:none;
 }
+	.portrait div#questions a {
+		margin-right:1px;
+	}
 div#response {
 	position:absolute;
 	left:0;
@@ -202,14 +232,14 @@ var faces = {
 	faces: [
 		['Jackie', 	'short black', 	'?', 	'', 'male', 	'light', ''],
 		['Soulja', 	'?', 	'?', 	'', 'male', 	'dark', 'spectacles hat'],
-//		['Bjork', 	'long black', 	'green', 	'', 'female', 	'light', ''],
+		['Bjork', 	'long black', 	'green', 	'', 'female', 	'light', ''],
 		['George', 	'long brown', 	'green', 	'moustache beard', 'male', 	'light', 'spectacles'],
-//		['Michael', 'short black', 	'black', 	'', 'male', 	'light', 'spectacles'],
+		['Michael', 'short black', 	'black', 	'', 'male', 	'light', 'spectacles'],
 		['Katy', 	'long black', 	'blue', 	'', 'female', 	'light', ''],
 		['Elton', 	'short brown',	'?', 	'', 'male', 	'light', 'spectacles'],
 		['Ozzy', 	'long black', 	'black', 	'', 'male', 	'light', 'spectacles'],
 		['Kanye',	'short black', 	'', 		'beard moustache', 'male', 	'dark', 'spectacles'],
-//		['John', 	'long brown', 	'black', 	'', 'male', 		'light', 'spectacles'],
+		['John', 	'long brown', 	'black', 	'', 'male', 		'light', 'spectacles'],
 		['GaGa', 	'long blonde', 	'', 		'', 'female', 		'light', 'spectacles'],
 		['Snoop', 	'long black', 	'brown', 	'beard moustache', 	'male', 	'dark', ''],
 		['Ice-T', 	'?', 			'brown', 	'beard moustache', 	'male', 	'light', 'hat'],
@@ -217,18 +247,23 @@ var faces = {
 		['Bono', 	'short black', 	'?', 		'', 				'male', 		'light', 'spectacles'],
 		['David', 	'short blonde', 'blue', 	'', 				'male', 		'light', ''],
 		['Britney',	'bald', 		'black', 	'', 				'female', 		'light', 'earrings'],
-//		['Freddie',	'short black', 	'black', 	'moustache', 		'male', 	'light', ''],
+		['Freddie',	'short black', 	'black', 	'moustache', 		'male', 	'light', ''],
 		['Polly',	'long black', 	'brown', 	'', 				'female', 	'light', 'earrings'],
 		['Edge','?', 			'black', 	'moustache', 		'male', 	'light', 'hat'],
 		['Alfred', 	'bald grey', 	'black', 	'', 				'male', 	'light', ''],
 		['Stanley', 'bald grey', 	'black', 	'beard moustache',	'male',		'light', 'spectacles'],
 		['Grace', 	'short black', 	'brown', 	'', 'female', 	'dark', ''],
-//		['Bill', 	'short brown', 	'green', 	'', 'male', 	'light', ''],
+		['Bill', 	'short brown', 	'green', 	'', 'male', 	'light', ''],
 		['Larry', 	'bald grey', 	'black', 	'', 'male', 	'light', 'spectacles'],
 		['Jack', 	'long brown', 	'brown', 	'beard', 'male', 	'light', ''],
 		['Annie', 	'short blonde', 'blue', 	'', 'female', 	'light', ''],
 		['Lemmy', 	'long brown', 	'black', 	'moustache', 'male', 	'light', ''],
 		['Will', 	'short black', 	'brown', 	'moustache', 'male', 	'dark', ''],
+		['Bean',	'short black',	'black',		'', 		'male',		'light', ''],
+		['Mario',	'short black',	'blue',		'moustache', 'male',	'light',  'hat'],
+		['Simon',	'short black',	'brown',		'', 'male',	'light',  ''],
+		["Nicki",	'long blonde',	'black',		'', 'female',	'dark',  'hat'],
+		["Keef",	'long grey',	'black',		'', 'male',	'light',  'earrings'],
 	],
 	
 	faces_left: [],
@@ -251,11 +286,13 @@ var faces = {
 		this.attach_questions();
 	},
 
-	remember_faces: function() {
+	list_names: function(arr) {
 		/* build an array of all the names */
-		for (num in this.faces) {
-			this.faces_left.push(this.faces[num][0]);
+		var arr2 = [];
+		for (num in arr) {
+			arr2.push(arr[num]['name']);
 		}
+		return arr2;
 	},
 	
 	slug: function(str) {
@@ -267,8 +304,9 @@ var faces = {
 		this.score = 0;
 		this.round = 1;
 		this.eliminates = 0;
-		this.remember_faces();
-		this.faceObjs = this.mix_array(this.faceObjs);
+		this.faceObjs = this.faceObjs.sort(function(a, b) { return (.5 - Math.random()); });
+		this.gameFaceObjs = this.faceObjs.slice(0,24);
+		this.faces_left = this.list_names(this.gameFaceObjs);
 		this.answer = this.faceObjs[Math.floor(Math.random() * this.faceObjs.length)];
 		this.render_board();
 		
@@ -289,8 +327,9 @@ var faces = {
 		var board = document.getElementById('faces');
 		var h = '';
 		var that = this;
-		for (var d in this.faceObjs) {
-			h += this.build_tile(this.faceObjs[d]);
+		window.TEMP = this.gameFaceObjs;
+		for (var d in this.gameFaceObjs) {
+			h += this.build_tile(this.gameFaceObjs[d]);
 		}
 		board.innerHTML = h;
 		// attach the cancel buttons
@@ -328,7 +367,10 @@ var faces = {
 	},
 
 	build_tile: function(face) {
-		return tile = '<li><span class="card"><a href="#' + this.slug(face['name']) + '" data-name="' + face["name"] + '"><img draggable="false" src="' + face.img + '"></a><span class="name">' + face['name'] + '</span></span></li>';		
+		return tile = '<li><span class="card">\
+						<a href="#' + this.slug(face['name']) + '" data-name="' + face["name"] + '">\
+							<img draggable="false" src="' + face.img + '">\
+						</a><span class="name">' + face['name'] + '</span></span></li>';		
 	},
 
 	resize_board: function() {
@@ -342,23 +384,8 @@ var faces = {
 		$('#faces li').css('width', Math.floor(avail_width/this.cols) + 'px').css('height', Math.floor(avail_height/this.rows) + 'px');
 	},
 	
-	mix_array: function(arr) {
-		/*
-		function that takes an array and returns a mixed version
-		*/
-		var new_arr = [];
-		var len = arr.length;
-		var rnd, entry;
-		for (var i=0; i<len ;i++) {
-			rnd = Math.floor(Math.random() * (len - i));
-			entry = arr.splice(rnd, 1);
-			new_arr.push(entry[0]);
-		}
-		return new_arr;
-	},
-	
 	remove_from: function(arr, val) {
-		/* removes a given vale from an array */
+		/* removes a given value from an array (assuming it only appears once) */
 		var pos = arr.indexOf(val);
 		if (pos > -1) {
 			var arr1 = arr.splice(0, pos)
@@ -399,6 +426,17 @@ var faces = {
 	guess: function(name) {
 		if (name === this.answer['name']) alert("Correct! It was " + name);
 		else alert("No, it's not " + name);
+	},
+	
+	dialog: {
+		show: function(text, img, btns) {
+			
+		},
+		
+		dismiss: function() {
+			
+		}
+		
 	},
 	
 	countdown: {
@@ -495,7 +533,7 @@ $(document).ready(function() {
 					<li><a href="#facialhair_beard">Beard</a></li>
 					<li><a href="#facialhair_brown">Moustache</a></li>
 					<li><a href="#access_hat">Hat</a></li>
-					<li><a href="#access_earrings">Ear-rings</a></li>
+					<li><a href="#access_earrings">Ear-ring(s)</a></li>
 					<li><a href="#access_spectacles">Spectacles</a></li>
 				</ul>
 			</div>
