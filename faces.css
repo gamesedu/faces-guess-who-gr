@@ -1,0 +1,212 @@
+body {
+	padding:5px;
+	font-family:verdana,arial,sans-serif;
+}
+.screen {
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	background:#fff;
+	z-index:5;
+}
+#game {
+	z-index:10;
+}
+ul#faces {
+	margin:0;
+	padding:0;
+	width:83%;
+	height:100% ;
+	max-height:100%;
+}
+	.portrait ul#faces {
+		width:99%;
+		height:80%;		
+	}
+
+ul#faces li {
+	display:inline-block;
+	max-width:16%;
+	text-align:center;
+	text-align:center;
+}
+	.portrait ul#faces li {
+		max-width:25%;
+	}
+
+
+ul#faces li span.card {
+	position:relative;
+	border:2px solid #369;
+	background: #93a5ff; 
+	background: -moz-radial-gradient(center, ellipse cover,  #ffffff 0%, #93a5ff 100%); /* FF3.6+ */
+	background: -webkit-radial-gradient(center, ellipse cover,  #ffffff 0%,#93a5ff 100%); /* Chrome10+,Safari5.1+ */
+	background: radial-gradient(ellipse at center,  #ffffff 0%,#93a5ff 100%); /* W3C */
+	border-radius:5%;
+	display:inline-block;
+	margin:5px;
+	overflow:hidden;
+	width:95%;
+	height:95%;
+}
+ul#faces li a {
+	position:absolute;
+	display:block;
+	left:0;
+	top:0;
+	bottom:1.5em;
+	right:0;
+	text-align:center;
+	
+}
+ul#faces li img {
+	max-width:100%;
+	max-height:100%;
+	width:auto;
+	height:auto;
+}
+ul#faces li span.name {
+	display:block;
+	background:#369;
+	color:#fff;
+	padding:.2em;
+	text-align:center;
+	position:absolute;
+	bottom:0;
+	left:0;
+	right:0;
+	font-weight:bold;
+}
+	ul#faces .eliminated.card {
+		border-color: #666;
+		background:#999;
+		opacity:.8;
+		background: #aaa; 
+		background: -moz-radial-gradient(center, ellipse cover,  #ffffff 0%, #aaa 100%); /* FF3.6+ */
+		background: -webkit-radial-gradient(center, ellipse cover,  #ffffff 0%,#aaa 100%); /* Chrome10+,Safari5.1+ */
+		background: radial-gradient(ellipse at center,  #ffffff 0%,#aaa 100%); /* W3C */
+	}
+	ul#faces .eliminated img {
+		visibility:hidden;
+	}
+	ul#faces .eliminated span.name {
+		background:#666;
+		color:#ccc;
+		font-weight:normal;
+	}
+/* control panel */
+#panel {
+	position:absolute;
+	right:0;
+	top:0;
+	width:16%;
+	padding:1em;
+}
+	.portrait #panel {
+		position:absolute;
+		right:auto;
+		top:auto;
+		bottom:0;
+		left:0;
+		width:100%;
+		padding:0;
+		border:1px solid red;
+	}
+#panel h2,
+#panel h3,
+#panel ul,
+#panel li {
+	margin:0;
+	padding:0;
+	list-style:none;
+	font-weight:normal;
+	font-size:1em;
+}
+	.portrait #panel ul {
+		padding:.25em;
+	}
+	.portrait #panel li {
+		width:20%;
+		float:left;
+	}
+div#questions h2 {
+	position:absolute;
+	left:-9999em;
+}
+div#questions {
+	position:relative;
+	overflow: hidden;
+}
+div#questions a {
+	display:block;
+	color:#fff;
+	background:#369;
+	margin:1px 0;
+	padding:.2em;
+	text-align:center;
+	text-decoration:none;
+}
+	.portrait div#questions a {
+		margin-right:1px;
+	}
+div#response {
+	position:absolute;
+	left:0;
+	right:0;
+	top:0;
+	bottom:0;
+	border:3px solid #666;
+	background:#ccc;
+	font-size:48px;
+	display:none;
+}
+div#response span {
+	display:block;
+	position:absolute;
+	top:50%;
+	width:100%;
+	margin-top:-1em;
+	text-align:center;
+}
+div#response.yes {
+	border:3px solid #0f0;
+	background:#393;
+	color:#0f0;
+}
+div#response.no {
+	border:3px solid #f00;
+	background:#933;
+	color:#f00;
+}
+div#response.dont-know {
+	border:3px solid #00f;
+	background:#339;
+	color:#00f;
+}
+/* dialog box */
+#mask { position:absolute; z-index:9998; background:#000; width:100%;height:100%; left:0; top:0; opacity:.75  }
+#dialog { position:absolute; width:50%; left:25%;top:25%;background:#fff; z-index:9999; }
+div#dialog_content { margin: 1em }
+#dialog_content.with_img { margin-left:25% }
+#dialog img { width:20%;height:auto; position:absolute; top:1em; left:1em }
+#dialog ul { display:block;list-style:none;padding:0;text-align:center; margin:1em; }
+#dialog li { display:inline-block;margin:.25em }
+
+#dialog li a {
+	text-decoration:none;
+	color:#fff;
+	padding:.25em .5em;
+	border-radius:6px;
+	background:#369;
+}
+#dialog li a:link,
+#dialog li a:visited,
+#dialog li a:hover,
+#dialog li a:active {
+	color:#fff;
+}
+#dialog li a:active {
+	background:#036;
+}
