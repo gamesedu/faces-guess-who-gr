@@ -65,7 +65,7 @@ var faces = {
         ['Simon',    'short black',    'brown',    '', 'male',    'light',  ''],
         ["Nicki",    'long blonde',    'black',    '', 'female',    'dark',  'hat'],
         ["Keef",    'long grey',    'black',    '', 'male',    'light',  'earrings']
-        // George CLooney
+        // George Clooney
         // Russell Brand
         // Oprah Winfrey
         // Albert Einstein
