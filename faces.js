@@ -26,7 +26,7 @@ var faces = {
     rows: 4,
     cols: 6,
     level: 1,
-    level_time: 60, // this is the initial amount of time for level 1.
+    level_time: 120, // this is the initial amount of time for level 1.
 
     faceObjs: [],
 
