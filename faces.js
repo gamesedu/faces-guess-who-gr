@@ -129,7 +129,7 @@ var faces = {
         var msg, btns
         msg = "<h1>Τέλος Παιχνιδιού</h1><p>Τελείωσε ο χρόνος!</p><p>Έψαχνες τον/την: <b>" + faces.answer.name + "</b></p>";
         if (this.score) {
-            msg += "<p>Your final score is " + this.score + "</p>";
+            msg += "<p>Το τελικό σκόρ είναι : " + this.score + "</p>";
         }
         btns = [
             { text: "Παίξε ξανά", callback: function() {
@@ -257,11 +257,11 @@ var faces = {
         this.countdown.stop();
         var level_score = this.countdown._display;
         this.score += level_score;
-        var msg = "<h1>Correct!</h1>\
-                    <p>You found the face!</p>\
-                    <p>Level " + this.level + " completed with " + level_score + " seconds remaining.</p>";
+        var msg = "<h1>Σωστά!</h1>\
+                    <p>Βρήκες το πρόσωπο!</p>\
+                    <p>Το επίπεδο " + this.level + " ολοκληρώθηκε με " + level_score + " δευτερόλεπτα να απομένουν.</p>";
         var btns = [{
-                text:"Next Level",
+                text:"Επόμενο επίπεδο",
                 callback: function() {
                     faces.dialog.dismiss();
                     faces.start_level(faces.level + 1);
@@ -276,7 +276,7 @@ var faces = {
             this.level_complete();
         }
         else {
-            alert("No, it's not " + name);
+            alert("Όχι, δεν είναι ο/η " + name);
         }
     },
 
