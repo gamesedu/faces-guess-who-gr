@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Faces Puzzle Game</title>
+	<meta name="author" content="Gareth Senior">
+<link href="faces.css" rel="stylesheet">
+<script src="jquery-1.9.1-min.js"></script>
+<script src="faces-notime.js"></script>
+
+<script>
+
+$(document).ready(function() {
+	faces.init();
+	faces.start_game();
+});
+
+</script>
+</head>
+<body>
+	
+	<h1>Faces</h1>
+	
+	<ul id="nav">
+		<li><a href="#about">About</a></li>
+		<li><a href="#game">Play</a></li>
+		<li><a href="#instructions">Instructions</a></li>
+	</ul>
+	
+	
+<div id="page">
+
+	<div id="about" class="screen">
+		<p>"Faces" is an online puzzle game. It is written in HTML and JavaScript and was designed to be played in a web-browser</p>
+		<p>"Faces" is nothing at all like "Guess Who?", a popular game created by Ora and Theo Coster and first produced by MB Games then later by Hasbro.</p>
+		<p>The "Faces" game engine was written by Gareth Senior, first in Adobe Flash and ActionScript to tie in with a "1k Runaway" competition that ran on Power FM, and later refined as a standalone game.</p>
+	</div>
+
+	<div id="game" class="screen">
+		<div id="panel">
+			<h2>Time <span id="time">90</span></h2>
+
+			<div id="questions">
+				<div id="response"></div>
+				<h2>Questions</h2>
+				<ul>
+					<li><a href="#hair_black">Black hair</a></li>
+					<li><a href="#hair_brown">Brown hair</a></li>
+					<li><a href="#hair_blonde">Blonde hair</a></li>
+					<li><a href="#hair_grey">Grey hair</a></li>
+					<li><a href="#hair_long">Long hair</a></li>
+					<li><a href="#hair_short">Short hair</a></li>
+					<li><a href="#hair_bald">Bald</a></li>
+					<li><a href="#gender_female">Female</a></li>
+					<li><a href="#gender_male">Male</a></li>
+					<li><a href="#eyes_blue">Blue eyes</a></li>
+					<li><a href="#eyes_brown">Brown eyes</a></li>
+					<li><a href="#eyes_black">Black eyes</a></li>
+					<li><a href="#skin_dark">Dark skin</a></li>
+					<li><a href="#skin_light">Light skin</a></li>
+					<li><a href="#facialhair_beard">Beard</a></li>
+					<li><a href="#facialhair_moustache">Moustache</a></li>
+					<li><a href="#access_hat">Hat</a></li>
+					<li><a href="#access_earrings">Ear-ring(s)</a></li>
+					<li><a href="#access_spectacles">Spectacles</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<ul id="faces">
+	
+		</ul>
+
+	</div>
+
+	<div id="instructions" class="screen">
+		<h2>How To Play</h2>
+		<p>Ask questions about the mystery face and receive a yes or no answer. With each question aim to eliminate as many faces as possible, click on a face to eliminate it (but you can click again to bring it back).</p>
+		<p>
+		Once you have only one face left, that should be the mystery face... the game will tell you if it is....
+		</p>
+		<p>
+		Keep clicking until you find the face or until your time runs out.	
+		</p>
+		<p>
+		With each successive level you'll get less and less time to find the mystery face.
+		</p>
+
+	</div>
+
+</div>
+
+</body>
+</html>
