@@ -127,12 +127,12 @@ var faces = {
 
     game_over: function() {
         var msg, btns
-        msg = "<h1>Game Over</h1><p>You ran out of time!</p><p>You were searching for <b>" + faces.answer.name + "</b></p>";
+        msg = "<h1>Τέλος Παιχνιδιού</h1><p>Τελείωσε ο χρόνος!</p><p>Έψαχνες τον/την: <b>" + faces.answer.name + "</b></p>";
         if (this.score) {
             msg += "<p>Your final score is " + this.score + "</p>";
         }
         btns = [
-            { text: "Play Again", callback: function() {
+            { text: "Παίξε ξανά", callback: function() {
                     faces.dialog.dismiss();
                     faces.start_game();
                 }
