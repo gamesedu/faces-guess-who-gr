@@ -238,7 +238,7 @@ var faces = {
 
     question: function(attr, value) {
         if (this.answer[attr].indexOf('?') !== -1) { return "Don't Know"; }
-        return !!(this.answer[attr].indexOf(value) + 1) ? "Yes":"No";
+        return !!(this.answer[attr].indexOf(value) + 1) ? "NAI":"OXI";
     },
 
     attach_questions: function() {
