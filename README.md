@@ -12,3 +12,7 @@ Anyway, in early 2012 I came across an old notebook in which I'd written out how
 I liked the notes, I liked the memory so I thought I'd tackle writing the code again. It was a fun little pject that I lazily hacked at in the evenings whilst watching the TV.
 
 In all likelihood I'll never polish it to the level of a finished product. But I like having it around.
+
+Changes:
+-20160315-Added faces-code.html : Shows greek command IF..THEN..ELSE
+-20160310-Added faces-notime.html : faces with much time (practically no time)
