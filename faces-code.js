@@ -27,16 +27,15 @@ document.getElementById("txt_show_code").value = txt_show_code;
 */
 
 var faces = {
-//txt_show_code : "",
+
     addText: function (text){
-		var text_if_then_else="ΕΑΝ ΕΧΕΙ "+text+" ΤΟΤΕ ΔΙΕΓΡΑΨΕ ΑΥΤΟΥΣ ΠΟΥ ΔΕΝ ΕΧΟΥΝ "+text+" ΑΛΛΙΩΣ/ΔΙΑΦΟΡΕΤΙΚΑ ΔΙΕΓΡΑΨΕ ΑΥΤΟΥΣ ΠΟΥ ΕΧΟΥΝ "+text;
+		var text_if_then_else="ΕΑΝ είναι/έχει "+text+" ΤΟΤΕ διέγραψε αυτούς που δεν είναι/έχουν "+text+" ΑΛΛΙΩΣ/ΔΙΑΦΟΡΕΤΙΚΑ διέγραψε αυτούς που είναι/έχουν "+text;
 		$('#txt_show_code').val(text_if_then_else); //replace text
 		//$('#txt_show_code').val($('#txt_show_code').val()+text_if_then_else+"\n"); //append text
 		$('#txt_show_code').scrollTop($('#txt_show_code')[0].scrollHeight);//scroll to end
-		
-       // txt_show_code += text
+		alert(text_if_then_else);
     },
-//txt_show_code : document.getElementById("txt_show_code") ,
+
 
 
     answer: undefined,
