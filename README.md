@@ -16,3 +16,6 @@ In all likelihood I'll never polish it to the level of a finished product. But I
 Changes:
 -20160315-Added faces-code.html : Shows greek command IF..THEN..ELSE
 -20160310-Added faces-notime.html : faces with much time (practically no time)
+
+
+<img src="faces_guess_who_(if_then_else).jpg" />
